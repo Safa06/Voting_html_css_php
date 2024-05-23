@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <style>
+        #address{
+            width: 20%;
+        }
+        /* #imagepart{
+            border-radius: 3px;
+        } */
+
+
+    </style>
+
+
+    <section id="header-section">
+        <div>
+            <h1>Online Voting System</h1>
+            <h4 id="subhead">~~ Voting is our duty ~~</h4>
+           
+        </div>
+    </section>
+
+ <!-- enctype for multi type data -->
+    <section id="reg-body-section">
+        <form action="../api/register.php" method="post" enctype="multipart/form-data">
+            <h3>Registration</h3>
+            <input type="text" name="name" placeholder="Name">
+            <input type="number" name="mobile" placeholder="Mobile">
+            <br><br>
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="cpassword" placeholder="Confirm Password"><br><br>
+            <input type="text" name="address" id="address" placeholder="Address"><br><br>
+            <!-- <label for="Upload image: "><input type="file" name="photo" placeholder="Image"></label><br><br> -->
+          <div id="imagepart">
+            Upload image:<input type="file" name="photo">
+          </div><br>
+            
+            Select role: <select name="role" id="dropbox">
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+            </select><br><br>
+    
+            <button id="registerbtn">Register</button><br><br>
+        </form>
+    </section>
+
+    <footer id="footer-section">
+        Already user? <a href="../index.html">Login here</a>
+    </footer>
+    
+
+</body>
+</html>
